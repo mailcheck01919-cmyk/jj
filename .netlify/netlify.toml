@@ -1,0 +1,44 @@
+redirectsOrigin = "config"
+plugins = []
+functionsDirectory = "/Users/amit/Documents/drainerS/Doc/DrConfig/drainer0/netlify/functions"
+functionsDirectoryOrigin = "config"
+headers = []
+
+[functions]
+
+[functions."*"]
+included_files = ["server/**"]
+node_bundler = "esbuild"
+
+[build]
+publish = "/Users/amit/Documents/drainerS/Doc/DrConfig/drainer0/dist"
+publishOrigin = "config"
+commandOrigin = "ui"
+command = "remix vite:build"
+functions = "/Users/amit/Documents/drainerS/Doc/DrConfig/drainer0/netlify/functions"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
+
+[[redirects]]
+from = "/api/*"
+to = "/.netlify/functions/api/api/:splat"
+status = 200.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
